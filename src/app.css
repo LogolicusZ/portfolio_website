@@ -1,0 +1,97 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+/* Latin-only, weight 400. The bare package imports pull every subset
+   (cyrillic, greek, vietnamese, symbols) for weights we never use. */
+@import "@fontsource/geist-sans/latin-400.css";
+@import "@fontsource/young-serif/latin-400.css";
+@font-face {
+  font-family: "Daydream";
+  src: url("/assets/fonts/daydream.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@theme {
+  --font-sans:
+    "Geist Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif:
+    "Young Serif", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  --font-daydream:
+    "Daydream", "Geist Sans", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  --color-primary: #f260b3;
+  --color-secondary: #e860f2;
+  /* dark mode primary: #9f60f2 */
+  --color-base-100: #fffefb;
+  --color-base-content: oklch(0.141 0.005 285.823);
+  /* Default link colour. Was the old pink (--color-primary), which is a
+     leftover from the previous palette and no longer used anywhere else. */
+  --color-link-primary: var(--color-accent-green);
+  --color-link-secondary: var(--color-secondary);
+
+  /* Green accents for nav/footer hovers. Fully saturated for vibrancy, with
+     lightness solved so each still clears 4.5:1 on the page background. */
+  --color-accent-lime: #568200;
+  --color-accent-grass: #228800;
+  --color-accent-green: #008917;
+  --color-accent-forest: #00884f;
+
+  /* Scale derived from the 1512px landing-page comp. */
+  --text-logotype: clamp(1.5rem, 4.13vw, 3.9rem);
+  --text-nav: clamp(1.15rem, 2.08vw, 1.97rem);
+  --text-contact: clamp(2.2rem, 5.5vw, 5.25rem);
+  --text-social: clamp(0.95rem, 2.45vw, 2.3rem);
+
+  --spacing-gutter: clamp(1rem, 3.37vw, 3.2rem);
+  --spacing-block: clamp(3rem, 6.6vw, 6.25rem);
+}
+
+body {
+  @apply bg-base-100 text-base-content;
+}
+
+a:not(.unset-link) {
+  @apply text-link-primary cursor-pointer underline hover:brightness-[80%];
+}
+
+/* Links inside post bodies are green, not the site-wide pink. Covers both
+   markdown links and the <a> tags written into figcaptions. Scoped to .prose
+   so links on other pages are unaffected. */
+.prose a,
+.prose a.unset-link {
+  color: var(--color-accent-green);
+  text-underline-offset: 2px;
+}
+
+.prose a:hover,
+.prose a.unset-link:hover {
+  color: var(--color-accent-forest);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
