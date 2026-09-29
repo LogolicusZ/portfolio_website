@@ -10,12 +10,11 @@
 		alt?: string;
 	};
 
-	export let images: Image[];
-	export let hero: Image | null = null;
+	let { images, hero = null }: { images: Image[]; hero?: Image | null } = $props();
 
-	let galleryEl: HTMLDivElement;
+	let galleryEl = $state() as HTMLDivElement;
 	let destroyLightbox: (() => void) | null = null;
-	let columnCount = 3;
+	let columnCount = $state(3);
 
 	function computeColumnCount() {
 		const w = window.innerWidth;
@@ -36,7 +35,7 @@
 		return columns;
 	}
 
-	$: columns = distribute(images, columnCount);
+	let columns = $derived(distribute(images, columnCount));
 
 	onMount(() => {
 		computeColumnCount();
