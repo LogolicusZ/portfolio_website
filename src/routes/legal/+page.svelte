@@ -6,7 +6,7 @@
 <div class="mx-auto max-w-3xl p-4 sm:p-6 lg:p-8">
   <div class="prose-a:underline">
     <!-- <h2 class="border-primary/50 mt-0 mb-4 border-b pb-1 text-lg font-bold">Privacy Policy</h2> -->
-    <h1 class="font-daydream mb-8 text-4xl">Privacy Policy</h1>
+    <h1 class="font-serif mb-8 text-4xl">Privacy Policy</h1>
 
     <p>
       Welcome to my portfolio page! As someone who values privacy, I am committed to safeguarding your personal information and

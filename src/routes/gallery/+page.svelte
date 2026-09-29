@@ -87,4 +87,6 @@
   ];
 </script>
 
-<Gallery {images} />
+<div class="-mx-gutter -mt-6">
+  <Gallery {images} archive />
+</div>

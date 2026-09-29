@@ -5,8 +5,8 @@
 @import "@fontsource/geist-sans/latin-400.css";
 @import "@fontsource/young-serif/latin-400.css";
 @font-face {
-  font-family: "Daydream";
-  src: url("/assets/fonts/daydream.ttf") format("truetype");
+  font-family: "Zhirok";
+  src: url("/assets/fonts/ZHIROK%20TYPEFACE.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -20,9 +20,8 @@
   --font-mono:
     ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
     "Courier New", monospace;
-  --font-daydream:
-    "Daydream", "Geist Sans", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-zhirok:
+    "Zhirok", "Geist Sans", ui-sans-serif, system-ui, sans-serif;
 
   --color-primary: #f260b3;
   --color-secondary: #e860f2;
@@ -55,6 +54,42 @@ body {
   @apply bg-base-100 text-base-content;
 }
 
+*,
+*::before,
+*::after {
+  border-radius: 0 !important;
+}
+
+@layer base {
+  main img,
+  main video {
+    --px: 3px;
+    --px-outer: calc(var(--px) * 2);
+    clip-path: polygon(
+      0 var(--px-outer),
+      var(--px) var(--px-outer),
+      var(--px) var(--px),
+      var(--px-outer) var(--px),
+      var(--px-outer) 0,
+      calc(100% - var(--px-outer)) 0,
+      calc(100% - var(--px-outer)) var(--px),
+      calc(100% - var(--px)) var(--px),
+      calc(100% - var(--px)) var(--px-outer),
+      100% var(--px-outer),
+      100% calc(100% - var(--px-outer)),
+      calc(100% - var(--px)) calc(100% - var(--px-outer)),
+      calc(100% - var(--px)) calc(100% - var(--px)),
+      calc(100% - var(--px-outer)) calc(100% - var(--px)),
+      calc(100% - var(--px-outer)) 100%,
+      var(--px-outer) 100%,
+      var(--px-outer) calc(100% - var(--px)),
+      var(--px) calc(100% - var(--px)),
+      var(--px) calc(100% - var(--px-outer)),
+      0 calc(100% - var(--px-outer))
+    );
+  }
+}
+
 a:not(.unset-link) {
   @apply text-link-primary cursor-pointer underline hover:brightness-[80%];
 }
@@ -73,6 +108,52 @@ a:not(.unset-link) {
   color: var(--color-accent-forest);
 }
 
+.pill {
+  --pill-fill: color-mix(in srgb, var(--accent) 65%, #1c1c1c);
+  position: relative;
+  isolation: isolate;
+  transition: color 0.18s ease;
+}
+.pill-canvas {
+  position: absolute;
+  inset: -0.1em -0.3em;
+  width: calc(100% + 0.6em);
+  height: calc(100% + 0.2em);
+  z-index: -1;
+  pointer-events: none;
+  color: var(--pill-fill);
+  opacity: 0;
+  transition: opacity 0.18s ease;
+}
+.pill:hover,
+.pill:focus-visible,
+.pill[aria-current="page"] {
+  color: var(--color-base-100);
+}
+.pill:hover .pill-canvas,
+.pill:focus-visible .pill-canvas,
+.pill[aria-current="page"] .pill-canvas {
+  opacity: 1;
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity 0.7s cubic-bezier(0.33, 1, 0.68, 1);
+}
+.fade.is-visible {
+  opacity: 1;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in-out;
+}
+::view-transition-new(root) {
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(16px);
@@ -89,9 +170,15 @@ a:not(.unset-link) {
   * {
     scroll-behavior: auto !important;
   }
-  .reveal {
+  .reveal,
+  .fade {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
+  }
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
   }
 }

@@ -6,8 +6,6 @@
     discord: 'logolicusz'
   };
 
-  // One style for every value on this page, so the email cannot drift
-  // out of step with the rest.
   const value = 'block wrap-break-word text-2xl font-medium sm:text-3xl';
   const label = 'text-sm tracking-[0.2em] text-neutral-500 uppercase';
   const note = 'mt-1.5 text-base text-neutral-500';
@@ -27,9 +25,6 @@
   <div class="mt-[clamp(3rem,7vw,4.5rem)] w-full space-y-10">
     <div use:inview class="reveal">
       <h2 class={label}>Email</h2>
-      <!-- Unchanged behind the scenes: the hidden spans break the address up so
-           it reads correctly on screen but never forms a matchable
-           user@domain.tld string in the markup. -->
       <span class={value}
         >logol<b class="hidden"
           >ASDÖFKLJASVD09N3NQIUPWRBÖAÖLSBJLLDVsadlfnasdcn823bröaföasdöfhsdca0saüodibdsaf</b
@@ -46,7 +41,7 @@
         target="_blank"
         rel="noopener noreferrer"
         style="--accent: var(--color-accent-grass)"
-        class="unset-link {value} no-underline transition-colors duration-200 hover:text-[var(--accent)]"
+        class="unset-link {value} no-underline transition-colors duration-200 hover:text-(--accent)"
       >
         {contact.instagram}
         <span class="sr-only"> (opens in a new tab)</span>

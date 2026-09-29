@@ -10,7 +10,11 @@
 		alt?: string;
 	};
 
-	let { images, hero = null }: { images: Image[]; hero?: Image | null } = $props();
+	let {
+		images,
+		hero = null,
+		archive = false
+	}: { images: Image[]; hero?: Image | null; archive?: boolean } = $props();
 
 	let galleryEl = $state() as HTMLDivElement;
 	let destroyLightbox: (() => void) | null = null;
@@ -18,7 +22,11 @@
 
 	function computeColumnCount() {
 		const w = window.innerWidth;
-		columnCount = w >= 1024 ? 3 : w >= 640 ? 2 : 1;
+		if (archive) {
+			columnCount = w >= 2500 ? 7 : w >= 1900 ? 6 : w > 900 ? 5 : w > 600 ? 3 : 2;
+		} else {
+			columnCount = w >= 1024 ? 3 : w >= 640 ? 2 : 1;
+		}
 	}
 
 	function distribute(imgs: typeof images, count: number) {
@@ -37,7 +45,12 @@
 
 	let columns = $derived(distribute(images, columnCount));
 
+	let mountedAt = 0;
+	const archiveDelay = (c: number) => () =>
+		Math.max(0, 1000 - (performance.now() - mountedAt)) + c * 70;
+
 	onMount(() => {
+		mountedAt = performance.now();
 		computeColumnCount();
 		window.addEventListener('resize', computeColumnCount);
 		destroyLightbox = initPhotoSwipe(galleryEl);
@@ -72,17 +85,17 @@
 				/>
 			</a>
 		{/if}
-		<div class="flex gap-4">
-			{#each columns as column}
-				<div class="flex flex-1 flex-col gap-4">
+		<div class={archive ? 'flex gap-1' : 'flex gap-4'}>
+			{#each columns as column, c}
+				<div class={archive ? 'flex min-w-0 flex-1 flex-col gap-1' : 'flex flex-1 flex-col gap-4'}>
 					{#each column as image}
 						<a
-							use:inview
+							use:inview={archive ? archiveDelay(c) : 0}
 							href={image.src}
 							data-pswp-width={image.width}
 							data-pswp-height={image.height}
 							target="_blank"
-							class="reveal block"
+							class={archive ? 'fade block' : 'reveal block'}
 						>
 							<img
 								src={image.src}
@@ -90,7 +103,9 @@
 								width={image.width}
 								height={image.height}
 								loading="lazy"
-								class="block w-full cursor-zoom-in rounded-sm transition-transform hover:scale-[0.985]"
+								class={archive
+									? 'block w-full cursor-zoom-in rounded-sm transition-opacity duration-300 [--px-outer:1px] [--px:1px] hover:opacity-85'
+									: 'block w-full cursor-zoom-in rounded-sm transition-transform hover:scale-[0.985]'}
 							/>
 						</a>
 					{/each}

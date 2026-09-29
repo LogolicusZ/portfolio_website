@@ -1,5 +1,6 @@
 <script lang="ts">
   import { page } from "$app/state";
+  import { roughPill } from "$lib/utils/roughPill";
 
   const accents = [
     "var(--color-accent-lime)",
@@ -25,16 +26,16 @@
   };
 </script>
 
-<header class="px-gutter flex flex-col items-center gap-4 pt-12 text-center md:gap-6 md:pt-[4.9vw]">
+<header style="view-transition-name: site-header" class="px-gutter flex flex-col items-center gap-4 pt-12 text-center md:gap-6 md:pt-[4.9vw]">
   <a
     href="/"
     class="unset-link group no-underline"
     aria-label="logolicusz — home"
   >
-    <span class="font-daydream text-logotype leading-[1.15]" aria-hidden="true">
+    <span class="font-zhirok text-logotype uppercase leading-[1.15]" aria-hidden="true">
       {#each wordmark as letter, i}
         <span
-          class="transition-colors duration-200 ease-out group-hover:text-[var(--accent)]"
+          class="transition-colors duration-200 ease-out group-hover:text-(--accent)"
           style="--accent: {accents[i % accents.length]}; transition-delay: {i * 35}ms"
         >{letter}</span>
       {/each}
@@ -49,7 +50,8 @@
             href={link.href}
             aria-current={isActive(link.href) ? "page" : undefined}
             style="--accent: {link.accent}"
-            class="unset-link text-nav block px-1 py-2 leading-tight no-underline transition-colors duration-200 hover:text-[var(--accent)] md:p-0 aria-[current=page]:underline aria-[current=page]:decoration-[var(--accent)] aria-[current=page]:decoration-[0.12em] aria-[current=page]:underline-offset-[0.22em]"
+            use:roughPill
+            class="pill unset-link text-nav block px-1 py-2 leading-tight no-underline md:p-0"
           >
             {link.label}
           </a>

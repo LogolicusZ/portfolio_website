@@ -1,4 +1,4 @@
-export function inview(node: HTMLElement, delay = 0) {
+export function inview(node: HTMLElement, delay: number | (() => number) = 0) {
   if (typeof IntersectionObserver === "undefined") {
     node.classList.add("is-visible");
     return {};
@@ -8,7 +8,10 @@ export function inview(node: HTMLElement, delay = 0) {
     (entries) => {
       for (const entry of entries) {
         if (!entry.isIntersecting) continue;
-        setTimeout(() => node.classList.add("is-visible"), delay);
+        setTimeout(
+          () => node.classList.add("is-visible"),
+          typeof delay === "function" ? delay() : delay,
+        );
         observer.unobserve(node);
       }
     },

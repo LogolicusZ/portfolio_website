@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { roughPill } from "$lib/utils/roughPill";
   const links = [
     {
       href: "https://www.instagram.com/logolicusz.kb/",
@@ -43,7 +44,8 @@
         target="_blank"
         rel="noopener noreferrer"
         style="--accent: {link.accent}"
-        class="unset-link text-social leading-[1.1] no-underline transition-colors duration-200 hover:text-[var(--accent)]"
+        use:roughPill
+        class="pill unset-link text-social leading-[1.1] no-underline"
       >
         {link.label}
       </a>
