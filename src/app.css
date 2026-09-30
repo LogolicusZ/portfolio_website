@@ -3,7 +3,12 @@
 /* Latin-only, weight 400. The bare package imports pull every subset
    (cyrillic, greek, vietnamese, symbols) for weights we never use. */
 @import "@fontsource/geist-sans/latin-400.css";
-@import "@fontsource/young-serif/latin-400.css";
+@font-face {
+  font-family: "Maratype";
+  src: url("/assets/fonts/Maratype.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
 @font-face {
   font-family: "Zhirok";
   src: url("/assets/fonts/ZHIROK%20TYPEFACE.ttf") format("truetype");
@@ -16,7 +21,7 @@
     "Geist Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-serif:
-    "Young Serif", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    "Maratype", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   --font-mono:
     ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
     "Courier New", monospace;
@@ -43,7 +48,7 @@
   /* Scale derived from the 1512px landing-page comp. */
   --text-logotype: clamp(1.5rem, 4.13vw, 3.9rem);
   --text-nav: clamp(1.15rem, 2.08vw, 1.97rem);
-  --text-contact: clamp(2.2rem, 5.5vw, 5.25rem);
+  --text-contact: clamp(2rem, 4.6vw, 4.5rem);
   --text-social: clamp(0.95rem, 2.45vw, 2.3rem);
 
   --spacing-gutter: clamp(1rem, 3.37vw, 3.2rem);

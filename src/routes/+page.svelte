@@ -19,7 +19,7 @@
 
   <p
     use:inview
-    class="reveal mt-[2em] max-w-[min(92%,22em)] text-center font-serif text-[clamp(1.25rem,3.05vw,4.9rem)] leading-[1.3] tracking-tight text-balance"
+    class="reveal mt-[2em] max-w-[min(92%,22em)] text-center font-serif text-[clamp(1.75rem,4.4vw,7rem)] leading-[1.05] text-balance"
   >
     Independent designer, crafting for passion with occasional side projects.
   </p>
