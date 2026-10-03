@@ -25,7 +25,7 @@
   <title>logolicusz</title>
 </svelte:head>
 
-<div class="flex flex-col items-center">
+<div class="-mt-4 flex flex-col items-center">
   <div class="pixel-corners relative aspect-video w-full max-w-[110rem] overflow-hidden rounded-sm">
     {#each slides as image, i (image.src)}
       <img

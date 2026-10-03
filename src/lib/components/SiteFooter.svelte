@@ -53,7 +53,7 @@
   </div>
 
   <div
-    class="mt-[clamp(1.35rem,2.7vw,2.1rem)] flex flex-col items-center gap-y-1 border-t border-black/10 pt-4 text-sm text-neutral-500 sm:flex-row sm:justify-between"
+    class="mt-[clamp(1.35rem,2.7vw,2.1rem)] flex flex-col items-center gap-y-1 pt-4 text-sm text-neutral-500 sm:flex-row sm:justify-between"
   >
     <p>&copy; 2026 LogolicusZ</p>
     <a
