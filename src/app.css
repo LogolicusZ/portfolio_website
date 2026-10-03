@@ -67,7 +67,8 @@ body {
 
 @layer base {
   main img,
-  main video {
+  main video,
+  main .pixel-corners {
     --px: 3px;
     --px-outer: calc(var(--px) * 2);
     clip-path: polygon(
