@@ -129,7 +129,7 @@ Here you can see how a keyboard looks right out of the CNC machine:
 And how it looks once it's finished:
 
 <figure class="my-6 not-prose">
-  <Carousel images={ddsProto} />
+  <Carousel images={ddsProto} showControls />
   <figcaption 
     class="mt-3 text-sm text-center text-neutral-500">The finished DDS prototype -
     Photos by <a href="https://www.instagram.com/logolicusz/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-green">Me</a>
@@ -151,7 +151,7 @@ Once the design was in a better place, I decided to do a proper IC on GeekHack, 
 After making that last final change, I ordered another prototype in June of 2025. This is also the prototype most of you are familiar with.
 
 <figure class="my-6 not-prose">
-  <Carousel images={finalProto} />
+  <Carousel images={finalProto} showControls />
   <figcaption 
     class="mt-3 text-sm text-center text-neutral-500">The June 2025 prototype - 
     Photos by <a href="https://www.instagram.com/logolicusz/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-green">Me</a>

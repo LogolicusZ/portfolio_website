@@ -16,7 +16,7 @@
   $effect(() => {
     const id = setInterval(() => {
       current = (current + 1) % slides.length;
-    }, 500);
+    }, 2000);
     return () => clearInterval(id);
   });
 </script>

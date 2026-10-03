@@ -37,6 +37,7 @@
         image={post.banner ?? null}
         delay={i * 80}
         priority={i === 0}
+        split
       />
     {/each}
   </div>

@@ -8,9 +8,10 @@
     images: CarouselImage[];
     autoplay?: boolean;
     interval?: number;
+    showControls?: boolean;
   }
 
-  let { images, autoplay = true, interval = 15000 }: Props = $props();
+  let { images, autoplay = true, interval = 15000, showControls = false }: Props = $props();
 
   let current = $state(0);
   let touchStartX = 0;
@@ -71,7 +72,7 @@
   type="button"
   onclick={prev}
   aria-label="Previous image"
-  class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-white/50 hover:bg-white/70 text-black rounded-full w-10 h-10 flex items-center justify-center opacity-0 group-hover:opacity-100 focus-visible:opacity-100 transition-opacity"
+  class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-white/50 hover:bg-white/70 text-black rounded-full w-10 h-10 flex items-center justify-center {showControls ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'} focus-visible:opacity-100 transition-opacity"
 >
   <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <polyline points="15 18 9 12 15 6" />
@@ -82,7 +83,7 @@
   type="button"
   onclick={next}
   aria-label="Next image"
-  class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-white/50 hover:bg-white/70 text-black rounded-full w-10 h-10 flex items-center justify-center opacity-0 group-hover:opacity-100 focus-visible:opacity-100 transition-opacity"
+  class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-white/50 hover:bg-white/70 text-black rounded-full w-10 h-10 flex items-center justify-center {showControls ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'} focus-visible:opacity-100 transition-opacity"
 >
   <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <polyline points="9 18 15 12 9 6" />
