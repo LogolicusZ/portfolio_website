@@ -26,7 +26,7 @@
 </svelte:head>
 
 <div class="-mt-4 flex flex-col items-center">
-  <div class="pixel-corners relative aspect-video w-full max-w-[110rem] overflow-hidden rounded-sm">
+  <div class="relative aspect-square w-full sm:aspect-[27/10] max-w-[110rem] overflow-hidden">
     {#each slides as image, i (image.src)}
       <img
         src={image.src}
@@ -43,7 +43,7 @@
 
     <p
       use:inview
-      class="reveal absolute inset-0 flex flex-col justify-center px-[4%] font-serif text-[clamp(1rem,6vw,7rem)] leading-[1.05] text-white"
+      class="reveal absolute inset-0 flex flex-col justify-center gap-y-[0.6em] px-[7%] font-serif text-[5vw] leading-[1.05] text-white sm:gap-y-0 sm:px-[4%] sm:text-[clamp(1rem,6vw,7rem)]"
     >
       <span class="sr-only">{headline.flat().join(' ')}</span>
       {#each headline as line, i (i)}
