@@ -30,10 +30,10 @@
   >
     <a href="/" class="unset-link no-underline" aria-label="logolicusz — home">
       <img
-        src="/assets/svg/logomark.svg"
+        src="/assets/svg/new_favicon.svg"
         alt=""
-        width="1500"
-        height="1500"
+        width="250"
+        height="227"
         class="w-[clamp(2.3rem,3.5vw,3.4rem)]"
       />
     </a>
