@@ -46,7 +46,7 @@
   --color-accent-forest: #00884f;
 
   /* Neon green for the wordmark hover. */
-  --color-accent-neon: #00ff0c;
+  --color-accent-neon: #FF0054;
 
   /* Scale derived from the 1512px landing-page comp. */
   --text-logotype: clamp(1.5rem, 4.13vw, 3.9rem);
