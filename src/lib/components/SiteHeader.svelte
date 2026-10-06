@@ -1,21 +1,13 @@
 <script lang="ts">
   import { page } from "$app/state";
-  import { roughPill } from "$lib/utils/roughPill";
-
-  const accents = [
-    "var(--color-accent-lime)",
-    "var(--color-accent-grass)",
-    "var(--color-accent-green)",
-    "var(--color-accent-forest)",
-  ];
 
   const wordmark = "logolicusz".split("");
 
   const nav = [
-    { href: "/gallery/", label: "Gallery", accent: accents[0] },
-    { href: "/about/", label: "About Me", accent: accents[1] },
-    { href: "/projects/", label: "Projects", accent: accents[2] },
-    { href: "/blog/", label: "Blog", accent: accents[3] },
+    { href: "/gallery/", label: "Gallery" },
+    { href: "/about/", label: "About Me" },
+    { href: "/projects/", label: "Projects" },
+    { href: "/blog/", label: "Blog" },
   ];
 
   const current = $derived(page.url.pathname.replace(/\/+$/, "") || "/");
@@ -35,8 +27,8 @@
     <span class="font-zhirok text-logotype uppercase leading-[1.15]" aria-hidden="true">
       {#each wordmark as letter, i}
         <span
-          class="transition-colors duration-200 ease-out group-hover:text-(--accent)"
-          style="--accent: {accents[i % accents.length]}; transition-delay: {i * 35}ms"
+          class="group-hover:text-accent-neon transition-colors duration-200 ease-out"
+          style="transition-delay: {i * 35}ms"
         >{letter}</span>
       {/each}
     </span>
@@ -49,8 +41,6 @@
           <a
             href={link.href}
             aria-current={isActive(link.href) ? "page" : undefined}
-            style="--accent: {link.accent}"
-            use:roughPill
             class="pill unset-link text-nav block px-1 py-2 leading-tight no-underline md:p-0"
           >
             {link.label}
