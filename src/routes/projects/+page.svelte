@@ -1,6 +1,5 @@
 <script lang="ts">
   import { inview } from '$lib/utils/inview';
-  import IndexEntry from '$lib/components/IndexEntry.svelte';
 
   let { data } = $props();
 </script>
@@ -9,26 +8,43 @@
   <title>Projects — logolicusz</title>
 </svelte:head>
 
-<section class="mx-auto flex max-w-3xl flex-col items-center pb-8 text-center">
-  <h1 use:inview class="reveal font-serif text-4xl tracking-tight sm:text-5xl">Projects</h1>
+<section class="pb-8">
+  <h1 class="sr-only">Projects</h1>
 
-  <p
-    use:inview={100}
-    class="reveal mt-6 max-w-lg text-base leading-relaxed text-pretty text-neutral-500 sm:text-lg"
-  >
-    Keyboards, sites and the occasional detour. A few of the things I have built.
-  </p>
-
-  <div class="mt-[clamp(3rem,7vw,4.5rem)] w-full space-y-[clamp(3.5rem,8vw,6.5rem)]">
+  <!-- Two tiles per row, every third tile spans the full width. -->
+  <div class="grid w-full grid-cols-1 gap-3 md:grid-cols-2">
     {#each data.projects as project, i}
-      <IndexEntry
+      <a
         href="/projects/{project.slug}"
-        title={project.title}
-        description={project.description}
-        image={project.banner ?? null}
-        delay={i * 80}
-        priority={i === 0}
-      />
+        use:inview={i * 80}
+        class="reveal unset-link group relative block overflow-hidden text-left no-underline {i % 3 === 2 ? 'md:col-span-2' : ''}"
+      >
+        <img
+          src={project.banner.path}
+          alt={project.banner.alt}
+          loading={i === 0 ? 'eager' : 'lazy'}
+          fetchpriority={i === 0 ? 'high' : undefined}
+          class="aspect-video w-full object-cover"
+        />
+
+        <!-- Darkens the image on hover/focus and reveals the call to action. -->
+        <div
+          class="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-300 group-hover:bg-black/60 group-focus-visible:bg-black/60"
+        >
+          <span
+            class="font-mono text-sm tracking-widest text-white uppercase opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100"
+          >
+            Have a look
+          </span>
+        </div>
+
+        <div
+          class="absolute inset-x-0 top-0 bg-linear-to-b from-black/50 to-transparent p-3 pb-8 font-mono text-xs leading-snug text-white uppercase sm:text-sm"
+        >
+          <p>{project.title}</p>
+          <p class="max-w-md text-white/80">{project.description}</p>
+        </div>
+      </a>
     {/each}
   </div>
 </section>
