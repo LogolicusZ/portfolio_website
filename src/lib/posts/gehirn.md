@@ -19,7 +19,7 @@ author:
        width="2560" height="1920" loading="eager"
        class="w-full rounded-sm" /></a>
   <figcaption class="text-sm text-center text-neutral-500">
-    Photo by <a href="https://www.instagram.com/markerchun/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-green">Markerchun</a>
+    Photo by <a href="https://www.instagram.com/markerchun/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-pink-dark">Markerchun</a>
   </figcaption>
 </figure>
 
@@ -33,13 +33,13 @@ Regarding Baion, Manu, one of the most well-known vendor managers, has taken him
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
     <a href="/assets/img/blog/Gehirn-article/Gehirn1.avif" data-pswp-width="1440" data-pswp-height="1440" class="block cursor-zoom-in"><img src="/assets/img/blog/Gehirn-article/Gehirn1.avif" alt="Gehirn TKL Images" title="Alexotos"
          width="1440" height="1440" loading="lazy"
-         class="w-full aspect-square object-cover rounded-sm" /></a>
+         class="img-outline w-full aspect-square object-cover rounded-sm" /></a>
     <a href="/assets/img/blog/Gehirn-article/Gehirn2.avif" data-pswp-width="1440" data-pswp-height="1440" class="block cursor-zoom-in"><img src="/assets/img/blog/Gehirn-article/Gehirn2.avif" alt="Gehirn TKL Images" title="Alexotos"
          width="1440" height="1440" loading="lazy"
-         class="w-full aspect-square object-cover rounded-sm" /></a>
+         class="img-outline w-full aspect-square object-cover rounded-sm" /></a>
   </div>
   <figcaption class="text-sm text-center text-neutral-500">
-    Photo by <a href="https://www.instagram.com/alexotos/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-green">Alexotos</a>
+    Photo by <a href="https://www.instagram.com/alexotos/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-pink-dark">Alexotos</a>
   </figcaption>
 </figure>
 
@@ -57,7 +57,7 @@ Many people appreciate this feature as it eliminates the need to open up the ent
   <a href="/assets/img/blog/Gehirn-article/Gehirn12.webp" data-pswp-width="1440" data-pswp-height="815" class="block cursor-zoom-in"><img width="1440" height="815" src="/assets/img/blog/Gehirn-article/Gehirn12.webp" alt="Gehirn TKL Images" title="Baionlenja"
        class="w-full rounded-sm" /></a>
   <figcaption class="text-sm text-center text-neutral-500">
-    Photo by <a href="https://www.instagram.com/baionlenja" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-green">Baionlenja</a>
+    Photo by <a href="https://www.instagram.com/baionlenja" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-pink-dark">Baionlenja</a>
   </figcaption>
 </figure>
 

@@ -51,7 +51,7 @@
     bind:this={bodyEl}
     class="prose prose-neutral mt-[clamp(2.5rem,6vw,4rem)] max-w-none
            prose-headings:font-serif prose-headings:font-normal prose-headings:tracking-tight
-           prose-h2:mt-[1.8em] prose-h2:mb-[0.7em] prose-h2:text-2xl sm:prose-h2:text-3xl
+           prose-h2:mt-[1.8em] prose-h2:mb-[0.7em] prose-h2:text-2xl sm:prose-h2:text-3xl lg:prose-h2:text-4xl
            prose-p:text-pretty prose-p:leading-relaxed
            prose-img:rounded-sm prose-img:my-0
            prose-figure:my-[clamp(1.75rem,4vw,2.75rem)]

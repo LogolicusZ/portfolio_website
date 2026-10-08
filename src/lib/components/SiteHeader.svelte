@@ -1,8 +1,6 @@
 <script lang="ts">
   import { page } from "$app/state";
 
-  const wordmark = "logolicusz".split("");
-
   const nav = [
     { href: "/gallery/", label: "Gallery" },
     { href: "/about/", label: "About Me" },
@@ -21,17 +19,10 @@
 <header style="view-transition-name: site-header" class="px-gutter flex flex-col items-center gap-4 pt-12 text-center md:gap-6 md:pt-[4.9vw]">
   <a
     href="/"
-    class="unset-link group no-underline"
+    class="unset-link gradient-hover text-logotype my-[-0.15em] py-[0.15em] no-underline"
     aria-label="logolicusz — home"
   >
-    <span class="font-zhirok text-logotype uppercase leading-[1.15]" aria-hidden="true">
-      {#each wordmark as letter, i}
-        <span
-          class="group-hover:text-accent-neon transition-colors duration-200 ease-out"
-          style="transition-delay: {i * 35}ms"
-        >{letter}</span>
-      {/each}
-    </span>
+    <span class="font-zhirok text-logotype uppercase leading-[1.15]" aria-hidden="true">logolicusz</span>
   </a>
 
   <nav aria-label="Primary">

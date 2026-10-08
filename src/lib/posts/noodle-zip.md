@@ -19,7 +19,7 @@ author:
        width="2560" height="1707" loading="eager"
        class="w-full rounded-sm" /></a>
   <figcaption class="text-sm text-center text-neutral-500">
-    Photo by <a href="https://www.instagram.com/logolicusz/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-green">LogolicusZ</a>
+    Photo by <a href="https://www.instagram.com/logolicusz/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-pink-dark">LogolicusZ</a>
   </figcaption>
 </figure>
 
@@ -37,7 +37,7 @@ The keyboard's design includes various engravings that reference Miyeon, such as
          class="w-full aspect-2/3 object-cover rounded-sm" /></a>
   </div>
   <figcaption class="text-sm text-center text-neutral-500">
-    Photos by <a href="https://www.instagram.com/logolicusz/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-green">LogolicusZ</a>
+    Photos by <a href="https://www.instagram.com/logolicusz/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-pink-dark">LogolicusZ</a>
   </figcaption>
 </figure>
 
@@ -50,7 +50,7 @@ The keyboard's color is misty lilac, which can appear pale or saturated dependin
        width="2560" height="1707" loading="lazy"
        class="w-full rounded-sm" /></a>
   <figcaption class="text-sm text-center text-neutral-500">
-    Photo by <a href="https://www.instagram.com/logolicusz/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-green">LogolicusZ</a>
+    Photo by <a href="https://www.instagram.com/logolicusz/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-pink-dark">LogolicusZ</a>
   </figcaption>
 </figure>
 

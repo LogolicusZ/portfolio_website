@@ -16,9 +16,9 @@ author:
 <figure class="my-6">
   <a href="/assets/img/blog/rascals/MTNU-1.avif" data-pswp-width="1920" data-pswp-height="1080" class="block cursor-zoom-in"><img src="/assets/img/blog/rascals/MTNU-1.avif" alt="Render by Afresh" title="Rascals"
        width="1920" height="1080" loading="eager"
-       class="w-full rounded-sm" /></a>
+       class="img-outline w-full rounded-sm" /></a>
   <figcaption class="text-sm text-center text-neutral-500">
-    Render by <a href="https://www.instagram.com/lykkostudio/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-green">Afresh</a>
+    Render by <a href="https://www.instagram.com/lykkostudio/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-pink-dark">Afresh</a>
   </figcaption>
 </figure>
 
@@ -31,7 +31,7 @@ They are known for their Doubleshot ABS keycaps, which have a vast array of colo
        loading="lazy"
        class="block mx-auto w-full max-w-md rounded-sm" /></a>
   <figcaption class="text-sm text-center text-neutral-500">
-    Image by <a href="https://www.instagram.com/gmk_keycaps/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-green">GMK</a>
+    Image by <a href="https://www.instagram.com/gmk_keycaps/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-pink-dark">GMK</a>
   </figcaption>
 </figure>
 
@@ -54,7 +54,7 @@ After this, the first released sets with the new MTNU profile were classics like
          class="w-full aspect-3/2 object-cover rounded-sm" /></a>
   </div>
   <figcaption class="text-sm text-center text-neutral-500">
-    Renders by <a href="https://www.instagram.com/gmk_keycaps/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-green">GMK</a>
+    Renders by <a href="https://www.instagram.com/gmk_keycaps/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-pink-dark">GMK</a>
   </figcaption>
 </figure>
 
@@ -72,8 +72,8 @@ Afresh wanted to create a set about two characters that are constantly at war in
          class="w-full aspect-square object-cover rounded-sm" /></a>
   </div>
   <figcaption class="text-sm text-center text-neutral-500">
-    Render by <a href="https://www.instagram.com/lykkostudio/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-green">Afresh</a>,
-    Photo by <a href="https://www.instagram.com/gmk_keycaps/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-green">GMK</a>
+    Render by <a href="https://www.instagram.com/lykkostudio/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-pink-dark">Afresh</a>,
+    Photo by <a href="https://www.instagram.com/gmk_keycaps/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-pink-dark">GMK</a>
   </figcaption>
 </figure>
 
@@ -89,7 +89,7 @@ After this, he worked on creating renders for the set. For this, he used Blender
        loading="lazy"
        class="w-full rounded-sm" /></a>
   <figcaption class="text-sm text-center text-neutral-500">
-    Renders by <a href="https://imperfectlink.gumroad.com/l/KRK2?layout=profile" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-green">Imperfectlink</a>
+    Renders by <a href="https://imperfectlink.gumroad.com/l/KRK2?layout=profile" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-pink-dark">Imperfectlink</a>
   </figcaption>
 </figure>
 
@@ -106,9 +106,9 @@ He is expecting to receive the color samples very soon, while also expecting to 
 <figure class="my-6">
   <a href="/assets/img/blog/rascals/MTNU-2.avif" data-pswp-width="2560" data-pswp-height="1440" class="block cursor-zoom-in"><img src="/assets/img/blog/rascals/MTNU-2.avif" alt="Render by Afresh" title="Rascals"
        width="2560" height="1440" loading="lazy"
-       class="w-full rounded-sm" /></a>
+       class="img-outline w-full rounded-sm" /></a>
   <figcaption class="text-sm text-center text-neutral-500">
-    Render by <a href="https://www.instagram.com/lykkostudio/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-green">Afresh</a>
+    Render by <a href="https://www.instagram.com/lykkostudio/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-pink-dark">Afresh</a>
   </figcaption>
 </figure>
 

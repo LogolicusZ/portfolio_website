@@ -23,23 +23,29 @@
   <div
     class="flex flex-col items-center gap-y-4 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-x-[clamp(1.125rem,2.34vw,2.25rem)]"
   >
-    <!-- Inlined (same paths as /assets/svg/new_favicon.svg) so the fill can
-         follow currentColor and turn green on hover. -->
     <a
       href="/"
-      class="unset-link hover:text-accent-neon no-underline transition-colors duration-200"
+      class="group unset-link no-underline"
       aria-label="logolicusz — home"
     >
       <svg
-        viewBox="0 0 250 226"
-        width="250"
-        height="226"
-        fill="currentColor"
+        viewBox="0 0 946 854"
+        width="946"
+        height="854"
+        fill="none"
         aria-hidden="true"
         class="h-auto w-[clamp(2.3rem,3.5vw,3.4rem)]"
       >
-        <path d="M144 77.7762L124.823 96.9529L106 78.1299L49.8704 21.9999L23.0003 48.87L80.13 106L97.9533 123.823L77.7769 144L23.0002 198.777L49.8702 225.647L106 169.516C116.396 159.12 133.251 159.12 143.646 169.516L144 169.87L199.777 225.647L226.647 198.777L151.693 123.823L169.517 106C155.424 106 144 94.5753 144 80.4829L144 77.7762Z" />
-        <path d="M169.517 106C155.424 106 144 94.5753 144 80.4829L144 77.7762L144 0L106 2.6974e-06L106 78.1299L106 105.999L80.13 106L8.09219e-06 106L0 144L77.7769 144L106 143.999V169.516C116.396 159.12 133.251 159.12 143.646 169.516L144 169.87V143.999L250 144L250.001 106L169.517 106Z" />
+        <path d="M857.482 752.039L755.824 853.697L543.462 641.336C504.132 602.005 440.365 602.005 401.035 641.336L188.676 853.697L87.0175 752.039L294.256 544.798L0 544.8L3.06155e-05 401.034L303.159 401.032L87.0179 184.892L188.676 83.233L401.035 295.591L401.034 1.02052e-05L544.801 0L544.801 304.494C544.801 357.81 588.022 401.032 641.339 401.032L945.835 401.034L945.835 544.801L650.242 544.798L857.482 752.039Z" fill="url(#footer-favicon-gradient)" />
+        <defs>
+          <linearGradient id="footer-favicon-gradient" x1="884" y1="634" x2="214" y2="328" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#FF4985" />
+            <stop
+              offset="0.567308"
+              class="transition-[stop-color] duration-300 [stop-color:black] group-hover:[stop-color:#FF4985]"
+            />
+          </linearGradient>
+        </defs>
       </svg>
     </a>
 
@@ -53,6 +59,13 @@
         {link.label}
       </a>
     {/each}
+
+    <a
+      href="/contact/"
+      class="pill unset-link text-social leading-[1.1] decoration-[0.06em] underline-offset-[0.12em]"
+    >
+      Contact Me
+    </a>
   </div>
 
   <div
@@ -61,7 +74,7 @@
     <p>&copy; 2026 LogolicusZ</p>
     <a
       href="/legal/"
-      style="--accent: var(--color-accent-forest)"
+      style="--accent: var(--color-accent-pink)"
       class="unset-link no-underline transition-colors hover:text-[var(--accent)]"
     >
       Privacy Policy

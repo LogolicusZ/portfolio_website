@@ -25,6 +25,48 @@
 </script>
 
 <a {href} use:inview={delay} class="reveal unset-link group block no-underline {split ? 'text-left' : 'text-center'}">
+  {#if split && image}
+    <div class="relative overflow-hidden rounded-sm">
+      <img
+        src={image.path}
+        alt={image.alt}
+        width={image.width}
+        height={image.height}
+        loading={priority ? "eager" : "lazy"}
+        fetchpriority={priority ? "high" : undefined}
+        class="aspect-video w-full object-cover"
+      />
+
+      <!-- Slightly darkened by default so the text reads; darkens further on
+           hover/focus and reveals the call to action. -->
+      <div
+        class="absolute inset-0 flex items-center justify-center bg-black/30 transition-colors duration-300 group-hover:bg-black/60 group-focus-visible:bg-black/60"
+      >
+        <span
+          class="font-mono text-sm tracking-widest text-white uppercase opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100"
+        >
+          Read me
+        </span>
+      </div>
+
+      <div
+        class="absolute inset-x-0 top-0 flex items-start justify-between gap-6 bg-linear-to-b from-black/50 to-transparent p-[clamp(0.75rem,2vw,1.25rem)] pb-8 text-white"
+      >
+        <h2 class="font-serif text-5xl leading-[1.1] tracking-tight sm:text-7xl">
+          {title}
+        </h2>
+
+        <div class="min-w-0 text-right">
+          {#if meta}
+            <p class="text-xs text-white/80 uppercase sm:text-base">{meta}</p>
+          {/if}
+          {#if description}
+            <p class="mt-1 max-w-sm text-sm text-pretty text-white/80 sm:mt-2 sm:text-xl">{description}</p>
+          {/if}
+        </div>
+      </div>
+    </div>
+  {:else}
   {#if image}
     <img
       src={image.path}
@@ -68,6 +110,7 @@
 
   {#if description}
     <p class="mx-auto mt-3 max-w-lg text-pretty text-neutral-500">{description}</p>
+  {/if}
   {/if}
   {/if}
 </a>

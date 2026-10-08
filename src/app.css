@@ -35,7 +35,7 @@
   --color-base-content: oklch(0.141 0.005 285.823);
   /* Default link colour. Was the old pink (--color-primary), which is a
      leftover from the previous palette and no longer used anywhere else. */
-  --color-link-primary: var(--color-accent-green);
+  --color-link-primary: var(--color-accent-pink);
   --color-link-secondary: var(--color-secondary);
 
   /* Green accents for nav/footer hovers. Fully saturated for vibrancy, with
@@ -45,8 +45,10 @@
   --color-accent-green: #008917;
   --color-accent-forest: #00884f;
 
-  /* Neon green for the wordmark hover. */
-  --color-accent-neon: #FF0054;
+  /* Hot pink from the landing page (wordmark, contact and footer logo
+     hovers). Used for all link text; the dark variant is the link hover. */
+  --color-accent-pink: #ff4985;
+  --color-accent-pink-dark: #d6326a;
 
   /* Scale derived from the 1512px landing-page comp. */
   --text-logotype: clamp(1.5rem, 4.13vw, 3.9rem);
@@ -72,18 +74,17 @@ a:not(.unset-link) {
   @apply text-link-primary cursor-pointer underline hover:brightness-[80%];
 }
 
-/* Links inside post bodies are green, not the site-wide pink. Covers both
-   markdown links and the <a> tags written into figcaptions. Scoped to .prose
-   so links on other pages are unaffected. */
+/* Links inside post bodies. Covers both markdown links and the <a> tags
+   written into figcaptions (which use .unset-link). */
 .prose a,
 .prose a.unset-link {
-  color: var(--color-accent-green);
+  color: var(--color-accent-pink);
   text-underline-offset: 2px;
 }
 
 .prose a:hover,
 .prose a.unset-link:hover {
-  color: var(--color-accent-forest);
+  color: var(--color-accent-pink-dark);
 }
 
 /* Plain black square behind nav/footer links on hover, while pressed and
@@ -114,6 +115,41 @@ a:not(.unset-link) {
 .pill:active::before,
 .pill[aria-current="page"]::before {
   background-color: #000;
+}
+
+/* Pink sweeps across the text on hover until it's fully pink, matching the
+   footer logo's gradient (pink enters from the bottom right at the same
+   angle). The gradient is wider than the text; sliding it from the dark
+   end to the pink end does the sweep. */
+.gradient-hover {
+  background-image: linear-gradient(
+    295deg,
+    var(--color-accent-pink) 0%,
+    var(--color-accent-pink) 40%,
+    var(--color-base-content) 60%,
+    var(--color-base-content) 100%
+  );
+  background-size: 250% 100%;
+  background-position: 0 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-decoration-color: var(--color-base-content);
+  transition:
+    background-position 0.5s ease-out,
+    text-decoration-color 0.5s ease-out;
+}
+.gradient-hover:hover,
+.gradient-hover:focus-visible {
+  background-position: 100% 0;
+  text-decoration-color: var(--color-accent-pink);
+}
+
+/* Hairline grey border for images whose edges are close to the page
+   background. Drawn inset so it doesn't change the image's size. */
+.img-outline {
+  outline: 1px solid var(--color-neutral-200);
+  outline-offset: -1px;
 }
 
 .fade {

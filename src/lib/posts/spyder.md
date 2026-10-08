@@ -18,7 +18,7 @@ author:
        width="1440" height="1152" loading="eager"
        class="w-full rounded-sm" /></a>
   <figcaption class="text-sm text-center text-neutral-500">
-    Photo by <a href="https://www.instagram.com/extrapriusplease.kb/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-green">Extrapriusplease</a>
+    Photo by <a href="https://www.instagram.com/extrapriusplease.kb/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-pink-dark">Extrapriusplease</a>
   </figcaption>
 </figure>
 
@@ -31,7 +31,7 @@ Speeding trough the years, the spyder went trough numerous changes build up to t
        width="2333" height="3500" loading="lazy"
        class="block mx-auto w-2/5 rounded-sm" /></a>
   <figcaption class="text-sm text-center text-neutral-500">
-    Photo by <a href="https://unsplash.com/photos/a-close-up-of-a-car-parked-in-a-field-UhTNl-xLOCU" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-green">Markus Spiske</a>
+    Photo by <a href="https://unsplash.com/photos/a-close-up-of-a-car-parked-in-a-field-UhTNl-xLOCU" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-pink-dark">Markus Spiske</a>
   </figcaption>
 </figure>
 
@@ -44,7 +44,7 @@ The Spyder effortlessly blends classic and modern design aspects, which have bee
        width="2560" height="1707" loading="lazy"
        class="w-full rounded-sm" /></a>
   <figcaption class="text-sm text-center text-neutral-500">
-    Photo by <a href="https://www.instagram.com/p/C4Dlw5-OCrH/?hl=en&img_index=1" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-green">Captain Sterling</a>
+    Photo by <a href="https://www.instagram.com/p/C4Dlw5-OCrH/?hl=en&img_index=1" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-pink-dark">Captain Sterling</a>
   </figcaption>
 </figure>
 

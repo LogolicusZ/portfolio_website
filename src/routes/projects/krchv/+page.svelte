@@ -16,7 +16,7 @@
     </p>
   </div>
 
-  <img use:inview class="reveal rounded-sm" src="/assets/img/krchv_screenshot.avif" width="1973" height="1207" />
+  <img use:inview class="img-outline reveal rounded-sm" src="/assets/img/krchv_screenshot.avif" width="1973" height="1207" />
 
   <div use:inview class="reveal mt-8 space-y-3">
     <p class="text-m uppercase opacity-50">Links</p>

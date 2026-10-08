@@ -40,7 +40,7 @@
         href={`https://instagram.com/${contact.instagram.replace('@', '')}`}
         target="_blank"
         rel="noopener noreferrer"
-        style="--accent: var(--color-accent-grass)"
+        style="--accent: var(--color-accent-pink)"
         class="unset-link {value} no-underline transition-colors duration-200 hover:text-(--accent)"
       >
         {contact.instagram}

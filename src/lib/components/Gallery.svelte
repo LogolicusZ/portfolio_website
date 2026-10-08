@@ -8,6 +8,8 @@
 		width: number;
 		height: number;
 		alt?: string;
+		// Hairline border for images whose edges blend into the page.
+		outline?: boolean;
 	};
 
 	let {
@@ -82,6 +84,7 @@
 					width={hero.width}
 					height={hero.height}
 					class="block w-full cursor-zoom-in rounded-sm transition-transform hover:scale-[0.995]"
+					class:img-outline={hero.outline}
 				/>
 			</a>
 		{/if}
@@ -106,6 +109,7 @@
 								class={archive
 									? 'block w-full cursor-zoom-in rounded-sm transition-opacity duration-300 [--px-outer:1px] [--px:1px] hover:opacity-85'
 									: 'block w-full cursor-zoom-in rounded-sm transition-transform hover:scale-[0.985]'}
+								class:img-outline={image.outline}
 							/>
 						</a>
 					{/each}

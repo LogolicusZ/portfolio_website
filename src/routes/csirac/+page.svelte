@@ -6,18 +6,19 @@
     src: '/assets/img/csirac/render8.avif',
     alt: 'CSIRAC render 8',
     width: 2560,
-    height: 1294
+    height: 1294,
+    outline: true
   };
 
   const images = [
     { src: '/assets/img/csirac/render1.avif', alt: 'Render 1', width: 2353, height: 1324 },
     { src: '/assets/img/csirac/render2.avif', alt: 'Render 2', width: 2353, height: 1324 },
-    { src: '/assets/img/csirac/render3.avif', alt: 'Render 3', width: 2353, height: 1324 },
-    { src: '/assets/img/csirac/render4.avif', alt: 'Render 4', width: 2353, height: 1324 },
-    { src: '/assets/img/csirac/render5.avif', alt: 'Render 5', width: 2353, height: 1324 },
-    { src: '/assets/img/csirac/render6.avif', alt: 'Render 6', width: 2353, height: 1324 },
-    { src: '/assets/img/csirac/render7.avif', alt: 'Render 7', width: 2353, height: 1324 },
-    { src: '/assets/img/csirac/render9.avif', alt: 'Render 9', width: 2560, height: 1440 },
+    { src: '/assets/img/csirac/render3.avif', alt: 'Render 3', width: 2353, height: 1324, outline: true },
+    { src: '/assets/img/csirac/render4.avif', alt: 'Render 4', width: 2353, height: 1324, outline: true },
+    { src: '/assets/img/csirac/render5.avif', alt: 'Render 5', width: 2353, height: 1324, outline: true },
+    { src: '/assets/img/csirac/render6.avif', alt: 'Render 6', width: 2353, height: 1324, outline: true },
+    { src: '/assets/img/csirac/render7.avif', alt: 'Render 7', width: 2353, height: 1324, outline: true },
+    { src: '/assets/img/csirac/render9.avif', alt: 'Render 9', width: 2560, height: 1440, outline: true },
     { src: '/assets/img/csirac/screenshot1.avif', alt: 'Screenshot 1', width: 1830, height: 726 },
     { src: '/assets/img/csirac/screenshot2.avif', alt: 'Screenshot 2', width: 948, height: 397 },
     { src: '/assets/img/csirac/screenshot3.avif', alt: 'Screenshot 3', width: 1947, height: 804 },

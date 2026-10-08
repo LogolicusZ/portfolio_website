@@ -42,7 +42,7 @@ author:
        width="2560" height="1707" loading="eager"
        class="w-full rounded-sm" /></a>
   <figcaption class="text-sm text-center text-neutral-500">
-    Photo by <a href="https://www.instagram.com/bowlkeyboards/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-green">Bowl</a>
+    Photo by <a href="https://www.instagram.com/bowlkeyboards/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-pink-dark">Bowl</a>
   </figcaption>
 </figure>
 
@@ -67,7 +67,7 @@ Since I barely knew anything about designing at all, I decided to see if anyone 
 <figure class="my-6">
   <a href="/assets/img/blog/juna/first_tkl_fusion.avif" data-pswp-width="2328" data-pswp-height="1272" class="block cursor-zoom-in"><img src="/assets/img/blog/juna/first_tkl_fusion.avif" alt="Juna design in Fusion 360" title="Juna"
        width="2328" height="1272" loading="eager"
-       class="w-full rounded-sm" /></a>
+       class="img-outline w-full rounded-sm" /></a>
   <figcaption class="text-sm text-center text-neutral-500">
     Fusion 360 Screenshot
   </figcaption>
@@ -105,7 +105,7 @@ This is also when I decided I wanted to make a small run of this keyboard, or at
 <figure class="my-6">
   <a href="/assets/img/blog/juna/juna_fusion.avif" data-pswp-width="1449" data-pswp-height="1076" class="block cursor-zoom-in"><img src="/assets/img/blog/juna/juna_fusion.avif" alt="Juna design in Fusion 360" title="Juna"
        width="1449" height="1076" loading="eager"
-       class="w-full rounded-sm" /></a>
+       class="img-outline w-full rounded-sm" /></a>
   <figcaption class="text-sm text-center text-neutral-500">
     Fusion 360 Screenshot
   </figcaption>
@@ -132,7 +132,7 @@ And how it looks once it's finished:
   <Carousel images={ddsProto} showControls />
   <figcaption 
     class="mt-3 text-sm text-center text-neutral-500">The finished DDS prototype -
-    Photos by <a href="https://www.instagram.com/logolicusz/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-green">Me</a>
+    Photos by <a href="https://www.instagram.com/logolicusz/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-pink-dark">Me</a>
   </figcaption>
 </figure>
 
@@ -154,7 +154,7 @@ After making that last final change, I ordered another prototype in June of 2025
   <Carousel images={finalProto} showControls />
   <figcaption 
     class="mt-3 text-sm text-center text-neutral-500">The June 2025 prototype - 
-    Photos by <a href="https://www.instagram.com/logolicusz/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-green">Me</a>
+    Photos by <a href="https://www.instagram.com/logolicusz/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-pink-dark">Me</a>
   </figcaption>
 </figure>
 
@@ -203,7 +203,7 @@ I also want to give a big shout out to Alexotos, ExtraPriusPlease (EPP), and Mug
          class="w-full aspect-square object-cover rounded-sm" /></a>
   </div>
   <figcaption class="text-sm text-center text-neutral-500">
-    Profile pictures of <a href="https://www.instagram.com/alexotos/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-green">Alexotos</a> , <a href="https://www.instagram.com/extrapriusplease.kb/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-green">EPP</a> and <a href="https://www.instagram.com/mugen.kbd/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-green">Mugen</a>
+    Profile pictures of <a href="https://www.instagram.com/alexotos/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-pink-dark">Alexotos</a> , <a href="https://www.instagram.com/extrapriusplease.kb/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-pink-dark">EPP</a> and <a href="https://www.instagram.com/mugen.kbd/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-pink-dark">Mugen</a>
   </figcaption>
 </figure>
 

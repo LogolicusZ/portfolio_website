@@ -18,7 +18,7 @@ author:
        width="1080" height="1146" loading="eager"
        class="w-full rounded-sm" /></a>
   <figcaption class="text-sm text-center text-neutral-500">
-    Photo by <a href="https://www.instagram.com/nainaigogo/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-green">Nainaigogo</a>
+    Photo by <a href="https://www.instagram.com/nainaigogo/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-pink-dark">Nainaigogo</a>
   </figcaption>
 </figure>
 
@@ -32,16 +32,16 @@ In 2021, they released the original SixtyFive, which was well received for its b
   <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
     <a href="/assets/img/blog/sixtyfive-article/SixtyFive1.avif" data-pswp-width="640" data-pswp-height="960" class="block cursor-zoom-in"><img width="640" height="960" src="/assets/img/blog/sixtyfive-article/SixtyFive1.avif" alt="Mode Designs" title="Mode Designs"
          loading="lazy"
-         class="w-full aspect-2/3 object-cover rounded-sm" /></a>
+         class="img-outline w-full aspect-2/3 object-cover rounded-sm" /></a>
     <a href="/assets/img/blog/sixtyfive-article/SixtyFive2.avif" data-pswp-width="640" data-pswp-height="959" class="block cursor-zoom-in"><img width="640" height="959" src="/assets/img/blog/sixtyfive-article/SixtyFive2.avif" alt="Mode Designs" title="Mode Designs"
          loading="lazy"
-         class="w-full aspect-2/3 object-cover rounded-sm" /></a>
+         class="img-outline w-full aspect-2/3 object-cover rounded-sm" /></a>
     <a href="/assets/img/blog/sixtyfive-article/SixtyFive7.avif" data-pswp-width="640" data-pswp-height="961" class="block cursor-zoom-in"><img width="640" height="961" src="/assets/img/blog/sixtyfive-article/SixtyFive7.avif" alt="Mode Designs" title="Mode Designs"
          loading="lazy"
-         class="w-full aspect-2/3 object-cover rounded-sm" /></a>
+         class="img-outline w-full aspect-2/3 object-cover rounded-sm" /></a>
   </div>
   <figcaption class="text-sm text-center text-neutral-500">
-    Photo by <a href="https://modedesigns.com/pages/sixtyfive" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-green">Mode Designs</a>
+    Photo by <a href="https://modedesigns.com/pages/sixtyfive" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-pink-dark">Mode Designs</a>
   </figcaption>
 </figure>
 
@@ -60,7 +60,7 @@ After the pre-order window, Mode tries to keep a certain amount of parts in stoc
        loading="lazy"
        class="w-full rounded-sm" /></a>
   <figcaption class="text-sm text-center text-neutral-500">
-    Photo by <a href="https://modedesigns.com/pages/sixtyfive" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-green">Mode Designs</a>
+    Photo by <a href="https://modedesigns.com/pages/sixtyfive" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-pink-dark">Mode Designs</a>
   </figcaption>
 </figure>
 
@@ -78,7 +78,7 @@ Following this, we can see how Mode has implemented this concept into all of the
          class="w-full aspect-4/5 object-cover rounded-sm" /></a>
   </div>
   <figcaption class="text-sm text-center text-neutral-500">
-    Photo by <a href="https://www.instagram.com/alexotos/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-green">Alexotos</a>
+    Photo by <a href="https://www.instagram.com/alexotos/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-pink-dark">Alexotos</a>
   </figcaption>
 </figure>
 
@@ -89,7 +89,7 @@ Now, let's talk about the New SixtyFive. It combines the aesthetics of the old S
        loading="lazy"
        class="w-full rounded-sm" /></a>
   <figcaption class="text-sm text-center text-neutral-500">
-    Photo by <a href="https://modedesigns.com/pages/sixtyfive" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-green">Mode Designs</a>
+    Photo by <a href="https://modedesigns.com/pages/sixtyfive" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-pink-dark">Mode Designs</a>
   </figcaption>
 </figure>
 

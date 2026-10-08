@@ -19,7 +19,7 @@ author:
        loading="eager"
        class="w-full rounded-sm" /></a>
   <figcaption class="text-sm text-center text-neutral-500">
-    Render by <a href="https://www.instagram.com/zetina.kb/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-green">ZetinaKB</a>
+    Render by <a href="https://www.instagram.com/zetina.kb/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-pink-dark">ZetinaKB</a>
   </figcaption>
 </figure>
 
@@ -37,8 +37,8 @@ According to the Protagonist's designer Randall, the owner of Wired In, the indu
          class="w-full aspect-4/5 object-cover rounded-sm" /></a>
   </div>
   <figcaption class="text-sm text-center text-neutral-500">
-    Photo by <a href="https://www.instagram.com/tylerkeyboard/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-green">Tylerkeyboard</a>,
-    Photo by <a href="https://www.instagram.com/taehatypes/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-green">Taehatypes</a>
+    Photo by <a href="https://www.instagram.com/tylerkeyboard/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-pink-dark">Tylerkeyboard</a>,
+    Photo by <a href="https://www.instagram.com/taehatypes/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-pink-dark">Taehatypes</a>
   </figcaption>
 </figure>
 
@@ -54,8 +54,8 @@ Randall believes that the Sonnet from Mode Designs was so successful because of 
          class="w-full aspect-4/5 object-cover rounded-sm" /></a>
   </div>
   <figcaption class="text-sm text-center text-neutral-500">
-    Photo by <a href="https://www.instagram.com/alexotos/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-green">Alexotos</a>,
-    Photo by <a href="https://www.instagram.com/nainaigogo/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-green">Nainaigogo</a>
+    Photo by <a href="https://www.instagram.com/alexotos/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-pink-dark">Alexotos</a>,
+    Photo by <a href="https://www.instagram.com/nainaigogo/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-pink-dark">Nainaigogo</a>
   </figcaption>
 </figure>
 
@@ -73,7 +73,7 @@ Randall wanted the Protagonist to have a deceivingly simple profile, yet still b
          class="w-full aspect-square object-cover rounded-sm" /></a>
   </div>
   <figcaption class="text-sm text-center text-neutral-500">
-    Photos by <a href="https://www.instagram.com/extrapriusplease.kb/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-green">Extrpriusplease.kb</a>
+    Photos by <a href="https://www.instagram.com/extrapriusplease.kb/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-pink-dark">Extrpriusplease.kb</a>
   </figcaption>
 </figure>
 
@@ -86,7 +86,7 @@ As he refined the design, he noticed that the top case accent turned into a sort
        width="1440" height="1528" loading="lazy"
        class="w-full rounded-sm" /></a>
   <figcaption class="text-sm text-center text-neutral-500">
-    Photo by <a href="https://www.instagram.com/nainaigogo" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-green">Nainaigogo</a>
+    Photo by <a href="https://www.instagram.com/nainaigogo" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-pink-dark">Nainaigogo</a>
   </figcaption>
 </figure>
 
@@ -102,7 +102,7 @@ He decided to call it the "Keyframe". The next step was figuring out how to conn
          class="w-full aspect-square object-cover rounded-sm" /></a>
   </div>
   <figcaption class="text-sm text-center text-neutral-500">
-    Render and Photo by <a href="https://www.instagram.com/wiredinstore/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-green">Wired In</a>
+    Render and Photo by <a href="https://www.instagram.com/wiredinstore/" class="unset-link underline underline-offset-2 transition-colors hover:text-accent-pink-dark">Wired In</a>
   </figcaption>
 </figure>
 
