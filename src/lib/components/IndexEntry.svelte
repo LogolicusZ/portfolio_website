@@ -12,6 +12,7 @@
     delay = 0,
     priority = false,
     split = false,
+    wide = false,
   }: {
     href: string;
     title: string;
@@ -21,10 +22,11 @@
     delay?: number;
     priority?: boolean;
     split?: boolean;
+    wide?: boolean;
   } = $props();
 </script>
 
-<a {href} use:inview={delay} class="reveal unset-link group block no-underline {split ? 'text-left' : 'text-center'}">
+<a {href} use:inview={delay} class="reveal unset-link group block no-underline {split ? 'text-left' : 'text-center'} {wide ? 'md:col-span-2' : ''}">
   {#if split && image}
     <div class="relative overflow-hidden rounded-sm">
       <img
@@ -52,7 +54,8 @@
       <div
         class="absolute inset-x-0 top-0 flex items-start justify-between gap-6 bg-linear-to-b from-black/50 to-transparent p-[clamp(0.75rem,2vw,1.25rem)] pb-8 text-white"
       >
-        <h2 class="font-serif text-5xl leading-[1.1] tracking-tight sm:text-7xl">
+        <!-- Half-width tiles in the grid get a smaller title so it fits. -->
+        <h2 class="font-serif text-5xl leading-[1.1] tracking-tight {wide ? 'sm:text-7xl' : 'sm:text-6xl md:text-4xl lg:text-5xl'}">
           {title}
         </h2>
 

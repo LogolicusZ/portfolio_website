@@ -33,13 +33,13 @@
     "prettier": "^3.9.7",
     "prettier-plugin-svelte": "^4.1.1",
     "prettier-plugin-tailwindcss": "^0.8.1",
-    "sharp": "^0.35.4",
+    "sharp": "^0.35.5",
     "svelte": "^5.57.0",
     "svelte-check": "^4.7.6",
     "tailwindcss": "^4.3.3",
     "typescript": "~6",
     "typescript-eslint": "^8.70.0",
-    "vite": "^8.3.0"
+    "vite": "^8.3.5"
   },
   "dependencies": {
     "@fontsource/geist-mono": "^5.3.0",
@@ -47,7 +47,6 @@
     "@fontsource/young-serif": "^5.3.0",
     "cookie": "^1.1.1",
     "image-size": "^2.0.4",
-    "isomorphic-dompurify": "^4.2.0",
     "js-yaml": "^5.4.2",
     "lucide-svelte": "^1.0.1",
     "photoswipe": "^5.4.4"

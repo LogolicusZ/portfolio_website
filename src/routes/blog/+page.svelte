@@ -17,17 +17,10 @@
   <title>Blog — logolicusz</title>
 </svelte:head>
 
-<section class="mx-auto flex max-w-3xl flex-col items-center pb-8 text-center">
-  <h1 use:inview class="reveal font-serif text-4xl tracking-tight sm:text-5xl">Blog</h1>
+<section class="pb-8">
+  <h1 class="sr-only">Blog</h1>
 
-  <p
-    use:inview={100}
-    class="reveal mt-6 max-w-lg text-base leading-relaxed text-pretty text-neutral-500 sm:text-lg"
-  >
-    Notes on keyboards, photography and whatever else I have been building.
-  </p>
-
-  <div class="mt-[clamp(3rem,7vw,4.5rem)] w-full space-y-[clamp(3.5rem,8vw,6.5rem)]">
+  <div class="grid w-full grid-cols-1 gap-3 md:grid-cols-2">
     {#each data.posts as post, i}
       <IndexEntry
         href="/blog/{post.slug}"
@@ -38,6 +31,7 @@
         delay={i * 80}
         priority={i === 0}
         split
+        wide={i % 3 === 2}
       />
     {/each}
   </div>
