@@ -5,7 +5,7 @@
 
 <section class="max-w-7xl mx-auto px-1 py-1">
   <div in:fly={{ y: 16, duration: 500 }}>
-    <h1 class="text-6xl font-serif mb-6">krchv</h1>
+    <h1 class="text-6xl font-spire mb-6">krchv</h1>
 
     <p class="mb-8 text-lg leading-relaxed">
       Or, Keyboard Archive. <br>

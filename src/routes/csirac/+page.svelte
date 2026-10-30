@@ -36,7 +36,7 @@
 
 <section class="mx-auto max-w-7xl px-1 py-1">
   <div in:fly={{ y: 16, duration: 500 }}>
-    <h1 class="mb-6 font-serif text-6xl">CSIRAC</h1>
+    <h1 class="mb-6 font-spire text-6xl">CSIRAC</h1>
   </div>
 
   <Gallery {hero} {images} />

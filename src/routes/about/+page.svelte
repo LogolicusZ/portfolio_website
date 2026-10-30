@@ -82,11 +82,11 @@
       </p>
     </div>
 
-    <div class="flex flex-col gap-[clamp(3.5rem,8vw,6rem)] md:pl-[7vw]">
+    <div class="flex flex-col gap-[clamp(3.5rem,8vw,6rem)] md:pl-[7vw] min-[1512px]:gap-[6.35vw]">
       {#each disciplines as discipline (discipline.title)}
-        <div use:inview class="reveal space-y-[clamp(1rem,2vw,1.75rem)] even:ml-[15vw] md:even:ml-[10vw]">
-          <h2 class="font-serif text-[clamp(2rem,9vw,3rem)] md:text-[clamp(2rem,3vw,3rem)] leading-none">{discipline.title}</h2>
-          <p class="max-w-md text-base leading-snug sm:text-lg">
+        <div use:inview class="reveal space-y-[clamp(1rem,2vw,1.75rem)] even:ml-[15vw] min-[1512px]:space-y-[1.85vw] md:even:ml-[10vw]">
+          <h2 class="font-spire text-[clamp(2rem,9vw,3rem)] md:text-[clamp(2rem,3vw,3rem)] min-[1512px]:text-[3vw] leading-none">{discipline.title}</h2>
+          <p class="max-w-md text-base leading-snug sm:text-lg min-[1512px]:max-w-[29.6vw] min-[1512px]:text-[1.19vw]">
             {discipline.text}
             {#if discipline.title === 'Design'}
               My latest is <a href="/projects/juna">Juna</a>.
@@ -96,9 +96,9 @@
       {/each}
 
       {#each details as detail (detail.title)}
-        <div use:inview class="reveal ml-[15vw] space-y-[clamp(0.75rem,1.5vw,1.25rem)] md:ml-[10vw]">
-          <h2 class="font-serif text-[clamp(2rem,9vw,3rem)] md:text-[clamp(2rem,3vw,3rem)] leading-none">{detail.title}</h2>
-          <ul class="text-base leading-snug text-neutral-500 sm:text-lg">
+        <div use:inview class="reveal ml-[15vw] space-y-[clamp(0.75rem,1.5vw,1.25rem)] md:ml-[10vw] min-[1512px]:space-y-[1.32vw]">
+          <h2 class="font-spire text-[clamp(2rem,9vw,3rem)] md:text-[clamp(2rem,3vw,3rem)] min-[1512px]:text-[3vw] leading-none">{detail.title}</h2>
+          <ul class="text-base leading-snug text-neutral-500 sm:text-lg min-[1512px]:text-[1.19vw]">
             {#each detail.items as item (item)}
               <li>{item}</li>
             {/each}
@@ -107,10 +107,10 @@
       {/each}
 
       <div use:inview class="reveal">
-        <p class="text-base text-neutral-500 sm:text-lg">Think we’d work well together?</p>
+        <p class="text-base text-neutral-500 sm:text-lg min-[1512px]:text-[1.19vw]">Think we’d work well together?</p>
         <a
           href="/contact/"
-          class="pill unset-link mt-3 block w-fit text-[clamp(2rem,9vw,3rem)] md:text-[clamp(2rem,3vw,3rem)] leading-tight no-underline"
+          class="pill unset-link mt-3 block w-fit text-[clamp(2rem,9vw,3rem)] md:text-[clamp(2rem,3vw,3rem)] leading-tight decoration-[0.06em] underline-offset-[0.12em] min-[1512px]:mt-[0.79vw] min-[1512px]:text-[3vw]"
         >
           Get in touch
         </a>

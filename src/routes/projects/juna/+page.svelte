@@ -46,7 +46,7 @@
   >
     <div class="order-2 md:order-1">
       <p class="text-xs uppercase tracking-[0.2em] opacity-50 mb-2">Product</p>
-      <h1 class="text-3xl md:text-5xl font-serif tracking-tight">
+      <h1 class="text-3xl md:text-5xl font-spire tracking-tight">
         Juna Mechanical Keyboard
       </h1>
     </div>

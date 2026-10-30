@@ -43,7 +43,7 @@
 
     <p
       use:inview
-      class="reveal absolute inset-0 flex flex-col justify-center gap-y-[0.6em] px-[7%] font-serif text-[5vw] leading-[1.05] text-white sm:gap-y-0 sm:px-[4%] sm:text-[clamp(1rem,6vw,7rem)]"
+      class="reveal absolute inset-0 flex flex-col justify-center gap-y-[0.6em] px-[7%] font-spire text-[3.37vw] leading-[1.05] text-white uppercase sm:gap-y-0 sm:px-[4%] sm:text-[clamp(0.67rem,4.04vw,4.71rem)]"
     >
       <span class="sr-only">{headline.flat().join(' ')}</span>
       {#each headline as line, i (i)}

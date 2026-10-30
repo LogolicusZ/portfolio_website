@@ -19,10 +19,10 @@
 <header style="view-transition-name: site-header" class="px-gutter flex flex-col items-center gap-4 pt-12 text-center md:gap-6 md:pt-[4.9vw]">
   <a
     href="/"
-    class="unset-link gradient-hover text-logotype my-[-0.15em] py-[0.15em] no-underline"
+    class="unset-link gradient-hover font-spire text-logotype my-[-0.15em] py-[0.15em] leading-[0.75] no-underline"
     aria-label="logolicusz — home"
   >
-    <span class="font-zhirok text-logotype uppercase leading-[1.15]" aria-hidden="true">logolicusz</span>
+    <span class="uppercase" aria-hidden="true">logolicusz</span>
   </a>
 
   <nav aria-label="Primary">

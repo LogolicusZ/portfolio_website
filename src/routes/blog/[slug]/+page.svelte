@@ -35,7 +35,7 @@
 <article class="mx-auto max-w-3xl pb-8">
   <header class="text-center">
     <p class="text-xs tracking-[0.2em] text-neutral-500 uppercase">{date}</p>
-    <h1 class="mt-3 font-serif text-4xl tracking-tight text-balance sm:text-5xl">
+    <h1 class="mt-3 font-spire text-4xl tracking-tight text-balance sm:text-5xl">
       {meta.title}
     </h1>
     {#if meta.description}
@@ -50,7 +50,7 @@
   <div
     bind:this={bodyEl}
     class="prose prose-neutral mt-[clamp(2.5rem,6vw,4rem)] max-w-none
-           prose-headings:font-serif prose-headings:font-normal prose-headings:tracking-tight
+           prose-headings:font-spire prose-headings:font-normal prose-headings:tracking-tight
            prose-h2:mt-[1.8em] prose-h2:mb-[0.7em] prose-h2:text-2xl sm:prose-h2:text-3xl lg:prose-h2:text-4xl
            prose-p:text-pretty prose-p:leading-relaxed
            prose-img:rounded-sm prose-img:my-0

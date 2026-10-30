@@ -55,7 +55,7 @@
         class="absolute inset-x-0 top-0 flex items-start justify-between gap-6 bg-linear-to-b from-black/50 to-transparent p-[clamp(0.75rem,2vw,1.25rem)] pb-8 text-white"
       >
         <!-- Half-width tiles in the grid get a smaller title so it fits. -->
-        <h2 class="font-serif text-5xl leading-[1.1] tracking-tight {wide ? 'sm:text-7xl' : 'sm:text-6xl md:text-4xl lg:text-5xl'}">
+        <h2 class="font-spire text-5xl leading-[1.1] tracking-tight {wide ? 'sm:text-7xl' : 'sm:text-6xl md:text-4xl lg:text-5xl'}">
           {title}
         </h2>
 
@@ -85,7 +85,7 @@
   {#if split}
     <div class="mt-5 flex items-start justify-between gap-6">
       <h2
-        class="font-serif text-5xl leading-none tracking-tight decoration-1 underline-offset-[0.15em] group-hover:underline sm:text-7xl"
+        class="font-spire text-5xl leading-none tracking-tight decoration-1 underline-offset-[0.15em] group-hover:underline sm:text-7xl"
       >
         {title}
       </h2>
@@ -105,7 +105,7 @@
   {/if}
 
   <h2
-    class="mt-2 font-serif text-2xl tracking-tight text-balance decoration-1 underline-offset-[0.3em] group-hover:underline sm:text-3xl"
+    class="mt-2 font-spire text-2xl tracking-tight text-balance decoration-1 underline-offset-[0.3em] group-hover:underline sm:text-3xl"
     class:mt-7={!meta}
   >
     {title}

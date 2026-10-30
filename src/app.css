@@ -4,14 +4,8 @@
    (cyrillic, greek, vietnamese, symbols) for weights we never use. */
 @import "@fontsource/geist-sans/latin-400.css";
 @font-face {
-  font-family: "Maratype";
-  src: url("/assets/fonts/Maratype.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Zhirok";
-  src: url("/assets/fonts/ZHIROK%20TYPEFACE.ttf") format("truetype");
+  font-family: "Spire";
+  src: url("/assets/fonts/Spire-v1.4.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -20,13 +14,11 @@
   --font-sans:
     "Geist Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-serif:
-    "Maratype", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   --font-mono:
     ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
     "Courier New", monospace;
-  --font-zhirok:
-    "Zhirok", "Geist Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-spire:
+    "Spire", "Geist Sans", ui-sans-serif, system-ui, sans-serif;
 
   --color-primary: #f260b3;
   --color-secondary: #e860f2;
@@ -51,9 +43,10 @@
   --color-accent-pink-dark: #d6326a;
 
   /* Scale derived from the 1512px landing-page comp. */
-  --text-logotype: clamp(1.5rem, 4.13vw, 3.9rem);
+  --text-logotype: min(max(2.75rem + 2.6vw, 7.68vw), 7.3rem);
   --text-nav: clamp(1.15rem, 2.08vw, 1.97rem);
-  --text-contact: clamp(2rem, 4.6vw, 4.5rem);
+  /* Same size as the logotype, so CONTACT ME matches its width. */
+  --text-contact: var(--text-logotype);
   --text-social: clamp(0.95rem, 2.45vw, 2.3rem);
 
   --spacing-gutter: clamp(1rem, 3.37vw, 3.2rem);

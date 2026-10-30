@@ -12,7 +12,7 @@
 </script>
 
 <section class="mx-auto flex max-w-3xl flex-col items-center pb-8 text-center">
-  <h1 use:inview class="reveal font-serif text-5xl tracking-tight sm:text-6xl">Contact Me</h1>
+  <h1 use:inview class="reveal font-spire text-5xl tracking-tight sm:text-6xl">Contact Me</h1>
 
   <p
     use:inview={100}
