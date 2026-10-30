@@ -11,13 +11,12 @@
 <section class="pb-8">
   <h1 class="sr-only">Projects</h1>
 
-  <!-- Two tiles per row, every third tile spans the full width. -->
   <div class="grid w-full grid-cols-1 gap-3 md:grid-cols-2">
     {#each data.projects as project, i}
       <a
         href="/projects/{project.slug}"
         use:inview={i * 80}
-        class="reveal unset-link group relative block overflow-hidden text-left no-underline {i % 3 === 2 ? 'md:col-span-2' : ''}"
+        class="reveal unset-link group relative block overflow-hidden text-left no-underline"
       >
         <img
           src={project.banner.path}
@@ -39,10 +38,12 @@
         </div>
 
         <div
-          class="absolute inset-x-0 top-0 bg-linear-to-b from-black/50 to-transparent p-3 pb-8 font-mono text-xs leading-snug text-white uppercase sm:text-sm"
+          class="absolute inset-x-0 top-0 bg-linear-to-b from-black/50 to-transparent p-3 pb-8 text-white"
         >
-          <p>{project.title}</p>
-          <p class="max-w-md text-white/80">{project.description}</p>
+          <h2 class="font-spire text-5xl leading-[1.1] tracking-tight sm:text-6xl md:text-4xl lg:text-5xl">
+            {project.title}
+          </h2>
+          <p class="mt-1 max-w-md font-mono text-xs leading-snug text-white/80 uppercase sm:text-sm">{project.description}</p>
         </div>
       </a>
     {/each}

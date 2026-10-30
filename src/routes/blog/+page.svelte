@@ -31,7 +31,6 @@
         delay={i * 80}
         priority={i === 0}
         split
-        wide={i % 3 === 2}
       />
     {/each}
   </div>

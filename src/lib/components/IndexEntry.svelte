@@ -12,7 +12,6 @@
     delay = 0,
     priority = false,
     split = false,
-    wide = false,
   }: {
     href: string;
     title: string;
@@ -22,11 +21,10 @@
     delay?: number;
     priority?: boolean;
     split?: boolean;
-    wide?: boolean;
   } = $props();
 </script>
 
-<a {href} use:inview={delay} class="reveal unset-link group block no-underline {split ? 'text-left' : 'text-center'} {wide ? 'md:col-span-2' : ''}">
+<a {href} use:inview={delay} class="reveal unset-link group block no-underline md:odd:last:col-span-2 md:odd:last:mx-auto md:odd:last:w-[calc(50%-0.375rem)] {split ? 'text-left' : 'text-center'}">
   {#if split && image}
     <div class="relative overflow-hidden rounded-sm">
       <img
@@ -52,21 +50,18 @@
       </div>
 
       <div
-        class="absolute inset-x-0 top-0 flex items-start justify-between gap-6 bg-linear-to-b from-black/50 to-transparent p-[clamp(0.75rem,2vw,1.25rem)] pb-8 text-white"
+        class="absolute inset-x-0 top-0 bg-linear-to-b from-black/50 to-transparent p-3 pb-8 text-white"
       >
-        <!-- Half-width tiles in the grid get a smaller title so it fits. -->
-        <h2 class="font-spire text-5xl leading-[1.1] tracking-tight {wide ? 'sm:text-7xl' : 'sm:text-6xl md:text-4xl lg:text-5xl'}">
+        <h2 class="font-spire text-5xl leading-[1.1] tracking-tight sm:text-6xl md:text-4xl lg:text-5xl">
           {title}
         </h2>
 
-        <div class="min-w-0 text-right">
-          {#if meta}
-            <p class="text-xs text-white/80 uppercase sm:text-base">{meta}</p>
-          {/if}
-          {#if description}
-            <p class="mt-1 max-w-sm text-sm text-pretty text-white/80 sm:mt-2 sm:text-xl">{description}</p>
-          {/if}
-        </div>
+        {#if description}
+          <p class="mt-1 max-w-md font-mono text-xs leading-snug text-white/80 uppercase sm:text-sm">{description}</p>
+        {/if}
+        {#if meta}
+          <p class="mt-1 font-mono text-xs leading-snug text-white/80 uppercase sm:text-sm">{meta}</p>
+        {/if}
       </div>
     </div>
   {:else}

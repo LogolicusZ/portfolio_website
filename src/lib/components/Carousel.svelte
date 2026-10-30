@@ -72,7 +72,7 @@
   type="button"
   onclick={prev}
   aria-label="Previous image"
-  class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-white/50 hover:bg-white/70 text-black rounded-full w-10 h-10 flex items-center justify-center {showControls ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'} focus-visible:opacity-100 transition-opacity"
+  class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 cursor-pointer bg-white/50 hover:bg-white/70 text-black rounded-[6px]! w-10 h-10 flex items-center justify-center {showControls ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'} focus-visible:opacity-100 transition-opacity"
 >
   <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <polyline points="15 18 9 12 15 6" />
@@ -83,10 +83,26 @@
   type="button"
   onclick={next}
   aria-label="Next image"
-  class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-white/50 hover:bg-white/70 text-black rounded-full w-10 h-10 flex items-center justify-center {showControls ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'} focus-visible:opacity-100 transition-opacity"
+  class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 cursor-pointer bg-white/50 hover:bg-white/70 text-black rounded-[6px]! w-10 h-10 flex items-center justify-center {showControls ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'} focus-visible:opacity-100 transition-opacity"
 >
   <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <polyline points="9 18 15 12 9 6" />
   </svg>
 </button>
+
+{#if images.length > 1}
+  <div class="absolute bottom-2 left-1/2 flex -translate-x-1/2 sm:bottom-4">
+    {#each images as image, i}
+      <button
+        type="button"
+        onclick={() => (current = i)}
+        aria-label="Go to image {i + 1} of {images.length}"
+        aria-current={i === current ? 'true' : undefined}
+        class="cursor-pointer p-1.5"
+      >
+        <span class="block h-2 rounded-[3px]! transition-all duration-300 {i === current ? 'w-5 bg-white' : 'w-2 bg-white/40 hover:bg-white/70'}"></span>
+      </button>
+    {/each}
+  </div>
+{/if}
 </div>
