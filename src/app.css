@@ -44,7 +44,9 @@
 
   /* Scale derived from the 1512px landing-page comp. */
   --text-logotype: min(max(2.75rem + 2.6vw, 7.68vw), 7.3rem);
-  --text-nav: clamp(1.15rem, 2.08vw, 1.97rem);
+  /* The 4.4vw floor lets it shrink on narrow phones so the nav stays on
+     one line. */
+  --text-nav: clamp(min(1.15rem, 4.4vw), 2.08vw, 1.97rem);
   /* Same size as the logotype, so CONTACT ME matches its width. */
   --text-contact: var(--text-logotype);
   --text-social: clamp(0.95rem, 2.45vw, 2.3rem);
@@ -108,6 +110,169 @@ a:not(.unset-link) {
 .pill:active::before,
 .pill[aria-current="page"]::before {
   background-color: #000;
+}
+
+/* Primary nav. Once it sticks to the top it shrinks a little and a frosted
+   capsule fades in behind the links, like Apple's floating search pill.
+   Both are transforms/pseudo-elements, so nothing below it shifts. The
+   corners are notched like the Spire typeface's (a small square cut out
+   of a corner) and very slightly rounded via shape(); the polygon before
+   each is the sharp fallback for browsers without it. clip-path can't
+   carry a box-shadow, so there is none. The back-to-top button is a
+   separate capsule that grows in next to it. */
+.nav-float {
+  transform-origin: top center;
+  transition: transform 0.45s cubic-bezier(0.32, 0.72, 0, 1);
+}
+.nav-float[data-stuck] {
+  transform: scale(0.8);
+}
+.vt-nav .nav-float {
+  view-transition-name: site-nav;
+}
+.nav-pill {
+  position: relative;
+  isolation: isolate;
+}
+.nav-pill::before,
+.nav-top {
+  font-size: var(--text-nav);
+  --notch: 0.28em;
+  --round: 0.06em;
+  background-color: color-mix(in oklab, var(--color-base-100) 50%, transparent);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  backdrop-filter: blur(16px) saturate(180%);
+}
+.nav-pill::before {
+  /* Top-left and bottom-right notched. */
+  clip-path: polygon(
+    var(--notch) 0,
+    100% 0,
+    100% calc(100% - var(--notch)),
+    calc(100% - var(--notch)) calc(100% - var(--notch)),
+    calc(100% - var(--notch)) 100%,
+    0 100%,
+    0 var(--notch),
+    var(--notch) var(--notch)
+  );
+  clip-path: shape(
+    from calc(var(--notch) + var(--round)) 0,
+    hline to calc(100% - var(--round)),
+    arc to 100% var(--round) of var(--round) cw,
+    vline to calc(100% - var(--notch) - var(--round)),
+    arc to calc(100% - var(--round)) calc(100% - var(--notch)) of var(--round) cw,
+    hline to calc(100% - var(--notch) + var(--round)),
+    arc to calc(100% - var(--notch)) calc(100% - var(--notch) + var(--round)) of var(--round) ccw,
+    vline to calc(100% - var(--round)),
+    arc to calc(100% - var(--notch) - var(--round)) 100% of var(--round) cw,
+    hline to var(--round),
+    arc to 0 calc(100% - var(--round)) of var(--round) cw,
+    vline to calc(var(--notch) + var(--round)),
+    arc to var(--round) var(--notch) of var(--round) cw,
+    hline to calc(var(--notch) - var(--round)),
+    arc to var(--notch) calc(var(--notch) - var(--round)) of var(--round) ccw,
+    vline to var(--round),
+    arc to calc(var(--notch) + var(--round)) 0 of var(--round) cw,
+    close
+  );
+  content: "";
+  position: absolute;
+  inset: -0.4em -0.8em;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(0.92);
+  transition:
+    opacity 0.3s ease,
+    transform 0.45s cubic-bezier(0.32, 0.72, 0, 1);
+}
+.nav-float[data-stuck] .nav-pill::before {
+  opacity: 1;
+  transform: none;
+}
+/* Same height as the capsule: the link's line height (plus its mobile
+   padding) and the capsule's 0.4em bleed top and bottom. Collapsed to
+   nothing until the nav sticks. */
+.nav-top {
+  --size: calc(2.05em + 1rem);
+  /* Top-right notched only. */
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--notch)) 0,
+    calc(100% - var(--notch)) var(--notch),
+    100% var(--notch),
+    100% 100%,
+    0 100%
+  );
+  clip-path: shape(
+    from var(--round) 0,
+    hline to calc(100% - var(--notch) - var(--round)),
+    arc to calc(100% - var(--notch)) var(--round) of var(--round) cw,
+    vline to calc(var(--notch) - var(--round)),
+    arc to calc(100% - var(--notch) + var(--round)) var(--notch) of var(--round) ccw,
+    hline to calc(100% - var(--round)),
+    arc to 100% calc(var(--notch) + var(--round)) of var(--round) cw,
+    vline to calc(100% - var(--round)),
+    arc to calc(100% - var(--round)) 100% of var(--round) cw,
+    hline to var(--round),
+    arc to 0 calc(100% - var(--round)) of var(--round) cw,
+    vline to var(--round),
+    arc to var(--round) 0 of var(--round) cw,
+    close
+  );
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 0;
+  height: var(--size);
+  margin-left: 0;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0;
+  transition:
+    width 0.45s cubic-bezier(0.32, 0.72, 0, 1),
+    margin-left 0.45s cubic-bezier(0.32, 0.72, 0, 1),
+    opacity 0.3s ease,
+    color 0.18s ease,
+    background-color 0.18s ease;
+}
+@media (width >= 48rem) {
+  .nav-top {
+    --size: 2.05em;
+  }
+}
+.nav-float[data-stuck] .nav-top {
+  width: var(--size);
+  margin-left: 1.2em;
+  opacity: 1;
+}
+.nav-top:hover,
+.nav-top:focus-visible,
+.nav-top:active {
+  color: var(--color-base-100);
+  background-color: #000;
+}
+/* The arrow sits still for a few seconds, then gives a small double hop,
+   and repeats while the nav is stuck. */
+.nav-float[data-stuck] .nav-top svg {
+  animation: nav-top-hop 5s ease-in-out infinite;
+}
+@keyframes nav-top-hop {
+  0%,
+  82%,
+  100% {
+    transform: none;
+  }
+  87% {
+    transform: translateY(-0.18em);
+  }
+  92% {
+    transform: none;
+  }
+  95% {
+    transform: translateY(-0.07em);
+  }
 }
 
 /* Pink sweeps across the text on hover until it's fully pink, matching the
@@ -178,6 +343,14 @@ a:not(.unset-link) {
 @media (prefers-reduced-motion: reduce) {
   * {
     scroll-behavior: auto !important;
+  }
+  .nav-float,
+  .nav-pill::before,
+  .nav-top {
+    transition: none !important;
+  }
+  .nav-top svg {
+    animation: none !important;
   }
   .reveal,
   .fade {

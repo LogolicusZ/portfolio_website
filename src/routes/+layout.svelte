@@ -7,11 +7,17 @@
 
   onNavigate((navigation) => {
     if (!document.startViewTransition) return;
+    // Only named during the transition: a view-transition-name makes the
+    // element a backdrop root, which would stop the nav's blur from seeing
+    // the page behind it.
+    const root = document.documentElement;
+    root.classList.add("vt-nav");
     return new Promise((resolve) => {
-      document.startViewTransition(async () => {
+      const transition = document.startViewTransition(async () => {
         resolve();
         await navigation.complete;
       });
+      transition.finished.finally(() => root.classList.remove("vt-nav"));
     });
   });
 </script>
